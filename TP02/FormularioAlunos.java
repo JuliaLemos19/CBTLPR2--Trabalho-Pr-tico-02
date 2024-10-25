@@ -16,16 +16,16 @@ public class FormularioAlunos extends JFrame {
     private List<Aluno> listaAlunos;
 
     public FormularioAlunos() {
-        // Inicializar a lista de alunos
+       
         listaAlunos = new ArrayList<>();
 
-        // Configurações da janela
+       
         setTitle("Cadastro de Alunos");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(5, 2));
 
-        // Criar e adicionar componentes
+      
         JLabel labelNome = new JLabel("Nome:");
         campoNome = new JTextField();
         JLabel labelIdade = new JLabel("Idade:");
@@ -49,7 +49,7 @@ public class FormularioAlunos extends JFrame {
         add(botaoMostrar);
         add(botaoSair);
 
-        // Ação do botão OK
+       
         botaoOk.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -57,7 +57,7 @@ public class FormularioAlunos extends JFrame {
                 int idade = Integer.parseInt(campoIdade.getText());
                 String endereco = campoEndereco.getText();
                 
-                // Criar novo aluno e adicionar à lista
+               
                 Aluno aluno = new Aluno();
                 aluno.setNome(nome);
                 aluno.setIdade(idade);
@@ -68,7 +68,7 @@ public class FormularioAlunos extends JFrame {
             }
         });
 
-        // Ação do botão Limpar
+        
         botaoLimpar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -78,7 +78,7 @@ public class FormularioAlunos extends JFrame {
             }
         });
 
-        // Ação do botão Mostrar
+       
        botaoMostrar.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -88,9 +88,9 @@ public class FormularioAlunos extends JFrame {
             StringBuilder mensagem = new StringBuilder("Resultado:\n");
             for (Aluno aluno : listaAlunos) {
                 mensagem.append("Id: ")
-                        .append(aluno.getId().toString())  // Exibe o UUID
+                        .append(aluno.getId().toString())  
                         .append(" Nome: ")
-                        .append(aluno.getNome())           // Exibe o nome do aluno
+                        .append(aluno.getNome())           
                         .append("\n");
             }
             JOptionPane.showMessageDialog(null, mensagem.toString(), "Mensagem", JOptionPane.INFORMATION_MESSAGE);
@@ -98,7 +98,7 @@ public class FormularioAlunos extends JFrame {
     }
 });
 
-        // Ação do botão Sair
+       
         botaoSair.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
