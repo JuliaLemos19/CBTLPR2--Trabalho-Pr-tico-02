@@ -1,5 +1,7 @@
 import java.util.UUID;
 
+//Julia Lemos
+
 public class Aluno {
     // Atributos
     private String endereco;
