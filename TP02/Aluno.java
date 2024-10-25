@@ -3,18 +3,18 @@ import java.util.UUID;
 //Julia Lemos
 
 public class Aluno {
-    // Atributos
+   
     private String endereco;
     private int idade;
     private String nome;
     private UUID id;
 
-    // Construtor padrão
+
     public Aluno() {
-        this.id = UUID.randomUUID(); // Gera um UUID único para cada instância
+        this.id = UUID.randomUUID(); 
     }
 
-    // Métodos getters e setters
+ 
 
     public String getEndereco() {
         return endereco;
@@ -48,7 +48,7 @@ public class Aluno {
         this.id = id;
     }
 
-    // Método para definir nome e idade ao mesmo tempo
+    
     public void setNome(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
